@@ -13,6 +13,27 @@ body {
   width: 100%;
 }
 
+#cursor {
+  height: 20px;
+  width: 20px;
+  background-color: #95c11e;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 99;
+  transition: all linear 0.1s;
+}
+
+#cursor-blur {
+  height: 500px;
+  width: 500px;
+  background-color: rgba(150, 193, 30, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(80px);
+  z-index: 9;
+  transition: all linear 0.4s;
+}
+
 #nav {
   height: 130px;
   width: 100%;
@@ -54,7 +75,7 @@ video {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  z-index: 10;
+  /* z-index: 10; */
 }
 #page1 h1 {
   font-size: 7.5vw;
@@ -80,4 +101,10 @@ video {
   font-size: 1.2vw;
   font-weight: 500;
   width: 40%;
+}
+
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  /* z-index: 10; */
 }
