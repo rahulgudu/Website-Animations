@@ -23,6 +23,7 @@ gsap.to("#nav", {
 
 gsap.to("#main", {
   backgroundColor: "#000",
+  
   scrollTrigger: {
     trigger: "#main",
     scroller: "body",
