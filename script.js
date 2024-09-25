@@ -1,6 +1,7 @@
 var crsr = document.querySelector("#cursor");
 var blur = document.querySelector("#cursor-blur");
 
+// mouse cursor follow
 document.addEventListener("mousemove", function (dets) {
   crsr.style.left = dets.x + "px";
   crsr.style.top = dets.y + "px";
@@ -8,6 +9,22 @@ document.addEventListener("mousemove", function (dets) {
   blur.style.top = dets.y - 250 + "px";
 });
 
+// navbar
+var nav = document.querySelectorAll("#nav h4");
+nav.forEach(function (elem) {
+  elem.addEventListener("mouseenter", function () {
+    crsr.style.scale = 3;
+    crsr.style.border = "1px solid #fff";
+    crsr.style.backgroundColor = "transparent";
+  });
+  elem.addEventListener("mouseleave", function () {
+    crsr.style.scale = 1;
+    crsr.style.border = "0px solid #95C11E"
+    crsr.style.backgroundColor = "#95C11E"
+  })
+});
+
+// change of navbar
 gsap.to("#nav", {
   backgroundColor: "#000",
   duration: 0.5,
@@ -21,9 +38,10 @@ gsap.to("#nav", {
   },
 });
 
+//change of main background
 gsap.to("#main", {
   backgroundColor: "#000",
-  
+
   scrollTrigger: {
     trigger: "#main",
     scroller: "body",
