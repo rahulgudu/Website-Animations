@@ -73,7 +73,7 @@ gsap.from("#about-us img,#about-us-in", {
   duration: 1,
   // stagger: 0.4, // this is to animate individually
   scrollTrigger: {
-    trigger: "#about-us", 
+    trigger: "#about-us",
     scroller: "body",
     // markers: true,
     start: "top 60%",
@@ -87,7 +87,7 @@ gsap.from(".card", {
   duration: 1,
   // stagger: 1, // this is to animate individually
   scrollTrigger: {
-    trigger: ".card",  
+    trigger: ".card",
     scroller: "body",
     // markers: true,
     start: "top 70%",
@@ -95,3 +95,23 @@ gsap.from(".card", {
   },
 });
 
+gsap.from("#colon1", {
+  y: -70,
+  x: -70,
+  scrollTrigger: {
+    trigger: "#colon1",
+    scroller: "body",
+    start: "top 55%",
+    end: "top 45%",
+  },
+});
+gsap.from("#colon2", {
+  y: 70,
+  x: 70,
+  scrollTrigger: {
+    trigger: "#colon1",
+    scroller: "body",
+    start: "top 55%",
+    end: "top 45%",
+  },
+});
