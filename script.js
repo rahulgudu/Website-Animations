@@ -26,7 +26,7 @@ nav.forEach(function (elem) {
 
 // for all paragraph
 var quotes = document.querySelectorAll("p");
-quotes.forEach(function(elem) {
+quotes.forEach(function (elem) {
   elem.addEventListener("mouseenter", function () {
     crsr.style.scale = 3;
     crsr.style.border = "1px solid #fff";
@@ -37,7 +37,7 @@ quotes.forEach(function(elem) {
     crsr.style.border = "0px solid #95C11E";
     crsr.style.backgroundColor = "#95C11E";
   });
-})
+});
 
 // change of navbar
 gsap.to("#nav", {
@@ -65,3 +65,33 @@ gsap.to("#main", {
     scrub: 2,
   },
 });
+
+// scroll trigger
+gsap.from("#about-us img,#about-us-in", {
+  y: 90,
+  opacity: 0,
+  duration: 1,
+  // stagger: 0.4, // this is to animate individually
+  scrollTrigger: {
+    trigger: "#about-us", 
+    scroller: "body",
+    // markers: true,
+    start: "top 60%",
+    end: "top 55%",
+    // scrub: 3,
+  },
+});
+gsap.from(".card", {
+  y: 0.8,
+  opacity: 0,
+  duration: 1,
+  // stagger: 1, // this is to animate individually
+  scrollTrigger: {
+    trigger: ".card",  
+    scroller: "body",
+    // markers: true,
+    start: "top 70%",
+    end: "top 65%",
+  },
+});
+
