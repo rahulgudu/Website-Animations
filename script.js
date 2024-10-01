@@ -115,3 +115,13 @@ gsap.from("#colon2", {
     end: "top 45%",
   },
 });
+
+gsap.from("#page4 h1", {
+  y: 50,
+  scrollTrigger: {
+    trigger: "#page4 h1",
+    scroller: "body",
+    start: "top 75%",
+    end: "top 70%",
+  },
+});
